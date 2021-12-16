@@ -19,7 +19,7 @@ The following table outlines the network VMs:
 | vMachine  | Private IP Address  | Operating System  | Location | Load Balancer
 |---|---|---|---|---|
 | Jump-Box  | 10.0.0.11  | Linux (Ubuntu 20.04) | East US | No
-| Elk  | 10.1.0.11  | Linux (Ubuntu 18.04)  | Central US | No
+| Elk  | 10.1.0.4  | Linux (Ubuntu 18.04)  | Central US | No
 | Web-1  | 10.0.0.12  | Linux (Ubuntu 20.04) | East US | Yes
 | Web-2  | 10.0.0.13  | Linux (Ubuntu 20.04)  | East US | Yes
 | Web-3  | 10.0.0.4  | Linux (Ubuntu 18.04) | East US (Zone 1) | Yes
@@ -69,7 +69,8 @@ This config is used to target machines by groups in YAML scripts:
 Metricbeat and Filebeat are used to capture data on the network (CPU usage %, number of containers, processes, network traffic, etc). 
 
 This chart shows lots of failed SSH attempts, which could indicate an attack:
-![](Filebeat-Failed-SSH-Attempts/JumpBox.png)
+
+![](images/Filebeat-Failed-SSH-Attempts.png)
 
 Here's a log that captures a failed SSH connection attempt:
 ```
