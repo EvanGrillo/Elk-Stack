@@ -1,0 +1,67 @@
+{
+	"_index": "filebeat-7.6.1-2021.12.09-000001",
+	"_type": "_doc",
+	"_id": "mtnJtn0BqAB6T-wxYPIL",
+	"_score": null,
+	"_source": {
+	  "agent": {
+		"hostname": "Web-1",
+		"id": "4269dc70-58bc-4824-ab65-27b2047dac3d",
+		"type": "filebeat",
+		"ephemeral_id": "eed5a792-ab0b-4283-aae3-067e49ee56db",
+		"version": "7.6.1"
+	  },
+	  "process": {
+		"name": "filebeat",
+		"pid": 704
+	  },
+	  "log": {
+		"file": {
+		  "path": "/var/log/syslog"
+		},
+		"offset": 141078
+	  },
+	  "fileset": {
+		"name": "syslog"
+	  },
+	  "message": "2021-12-14T02:33:02.611Z#011INFO#011[monitoring]#011log/log.go:145#011Non-zero metrics in the last 30s#011{\"monitoring\": {\"metrics\": {\"beat\":{\"cpu\":{\"system\":{\"ticks\":360,\"time\":{\"ms\":4}},\"total\":{\"ticks\":750,\"time\":{\"ms\":12},\"value\":750},\"user\":{\"ticks\":390,\"time\":{\"ms\":8}}},\"handles\":{\"limit\":{\"hard\":524288,\"soft\":1024},\"open\":10},\"info\":{\"ephemeral_id\":\"eed5a792-ab0b-4283-aae3-067e49ee56db\",\"uptime\":{\"ms\":662435}},\"memstats\":{\"gc_next\":10303680,\"memory_alloc\":6406864,\"memory_total\":63032696},\"runtime\":{\"goroutines\":109}},\"filebeat\":{\"events\":{\"added\":2,\"done\":2},\"harvester\":{\"files\":{\"6fa46f7f-8c64-4406-bb5c-e39c388e2712\":{\"last_event_published_time\":\"2021-12-14T02:32:39.438Z\",\"last_event_timestamp\":\"2021-12-14T02:32:34.438Z\",\"read_offset\":2711,\"size\":2711}},\"open_files\":1,\"running\":1}},\"libbeat\":{\"config\":{\"module\":{\"running\":0}},\"output\":{\"events\":{\"acked\":2,\"batches\":2,\"total\":2},\"read\":{\"bytes\":692},\"write\":{\"bytes\":4723}},\"pipeline\":{\"clients\":15,\"events\":{\"active\":0,\"published\":2,\"total\":2},\"queue\":{\"acked\":2}}},\"registrar\":{\"states\":{\"current\":4,\"update\":2},\"writes\":{\"success\":2,\"total\":2}},\"system\":{\"load\":{\"1\":0,\"15\":0.07,\"5\":0.05,\"norm\":{\"1\":0,\"15\":0.07,\"5\":0.05}}}}}}",
+	  "input": {
+		"type": "log"
+	  },
+	  "@timestamp": "2021-12-14T02:33:02.000Z",
+	  "system": {
+		"syslog": {}
+	  },
+	  "ecs": {
+		"version": "1.4.0"
+	  },
+	  "service": {
+		"type": "system"
+	  },
+	  "host": {
+		"hostname": "Web-1",
+		"name": "Web-1"
+	  },
+	  "event": {
+		"timezone": "+00:00",
+		"module": "system",
+		"dataset": "system.syslog"
+	  }
+	},
+	"fields": {
+	  "suricata.eve.timestamp": [
+		"2021-12-14T02:33:02.000Z"
+	  ],
+	  "@timestamp": [
+		"2021-12-14T02:33:02.000Z"
+	  ]
+	},
+	"highlight": {
+	  "event.dataset": [
+		"@kibana-highlighted-field@system.syslog@/kibana-highlighted-field@"
+	  ]
+	},
+	"sort": [
+	  1639449182000
+	]
+}

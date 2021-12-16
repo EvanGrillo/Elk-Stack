@@ -1,0 +1,14 @@
+﻿"host.hostname: Descending",Count,"process.name: Descending",Count
+"DVWA-VM3",84,filebeat,31
+"DVWA-VM3",84,metricbeat,30
+"DVWA-VM3",84,systemd,18
+"DVWA-VM3",84,"systemd-timesyncd",4
+"DVWA-VM3",84,python3,1
+"Web-1",73,filebeat,32
+"Web-1",73,metricbeat,30
+"Web-1",73,systemd,9
+"Web-1",73,python3,2
+"Web-2",70,filebeat,32
+"Web-2",70,metricbeat,30
+"Web-2",70,systemd,6
+"Web-2",70,python3,2
