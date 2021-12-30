@@ -36,7 +36,7 @@ I also wrote a policy that allows SSH connections from the jump box machine to o
 
 ### Ansible
 
-After downloading Docker on the jump box, I pulled an Ansible container (an image named ```cyberxsecurity/ansible```).
+After downloading Docker on the jump box, I pulled an Ansible container (an image ```cyberxsecurity/ansible```).
 
 The following image shows how I run the Ansible container.
 
@@ -63,6 +63,19 @@ This config is used to target machines by groups in YAML scripts:
 - name: Install and Launch Filebeat on Webservers
   hosts: webservers
 ```
+
+Targeting the webservers (i.e. three VMs sitting behind a load balancer that run the 'Damn Vulnerable Web Application'), I wrote a YAML file that automates tasks that I would otherwise perform manually on each machine:
+
+<ol>
+  <li>Install Docker</li>
+  <li>Install PIP & the Docker Python Module</li>
+  <li>Install & launch DVWA image</li>
+  <li>Run Docker with systemd</li>
+</ol>
+
+Every action that I take in the command line on my Linux machines (utilizing programs like `cp`, `systemctl`, `curl` `find`, etc) can be automated with the YAML scripts and deployment via the Ansible container. The key difference between running YAML scripts with Ansible and running a bash script is that I can easily target groups of machines. 
+
+Targeting the Elk group (i.e. one VM that monitors the network & DVWA traffic), I wrote a YAML file that performs similar tasks as the DVWA playbook, with one key difference being that it installs an Elk image and runs an analytics app with dashboards that render charts and reporting tools. 
 
 ### Filebeat & Metricbeat
 
@@ -156,6 +169,6 @@ Here's a log that captures a failed SSH connection attempt:
 }
 ```
 
-While the IP is from the local network (no public IPs are allowed to make direct SSH connections with this VM), this log illustrates how the system captures events that security analysts can use to understand user behavior.
+This system can be utilized to track nmap port scans, brute force attacks, SQL injections, and all sorts of network activity that may put sensitive data at risk. 
 
 
